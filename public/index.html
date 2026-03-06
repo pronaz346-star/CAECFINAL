@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAEC26 — Register</title>
+    <meta property="og:title" content="CAEC26 — Central Asian Endourology Congress 2026">
+    <meta property="og:description" content="Register for the premier Central Asian Endourology Congress. June 15–17, 2026 · Tashkent, Uzbekistan.">
+    <meta property="og:image" content="https://i.postimg.cc/xTbN1fdv/26.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://caec2026.vercel.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CAEC26 — Central Asian Endourology Congress 2026">
+    <meta name="twitter:description" content="Register for the premier Central Asian Endourology Congress. June 15–17, 2026 · Tashkent, Uzbekistan.">
+    <meta name="twitter:image" content="https://i.postimg.cc/xTbN1fdv/26.png">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/xTbN1fdv/26.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Signika:wght@600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '695164696241210');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.net/tr?id=695164696241210&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+        :root {
+            --primary-blue: #3b82f6;
+            --sky-blue: #5dade2;
+            --light-bg: #e8f4f8;
+            --white: #ffffff;
+            --dark: #1f2937;
+            --gray: #6b7280;
+            --red-accent: #dc2626;
+            --success: #10b981;
+            --space-xs: 0.5rem;
+            --space-sm: 0.75rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --container-max: 1200px;
+            --container-pad: clamp(1rem, 5vw, 3rem);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            background: linear-gradient(135deg, var(--light-bg) 0%, #f0f9fc 100%);
+            background-attachment: fixed;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes slideDown { from { opacity:0; transform:translateY(-16px); } to { opacity:1; transform:translateY(0); } }
+        @keyframes fadeInUp  { from { opacity:0; transform:translateY(24px);  } to { opacity:1; transform:translateY(0); } }
+        @keyframes fadeInLeft  { from { opacity:0; transform:translateX(-28px); } to { opacity:1; transform:translateX(0); } }
+        @keyframes fadeInRight { from { opacity:0; transform:translateX(28px);  } to { opacity:1; transform:translateX(0); } }
+        @keyframes spin  { to { transform: rotate(360deg); } }
+        @keyframes float { 0%,100% { transform:translateY(0) translateX(0); } 50% { transform:translateY(40px) translateX(20px); } }
+
+        /* ===== BACKGROUND ===== */
+        .bg-gradient { position:fixed; inset:0; background:linear-gradient(135deg,var(--light-bg) 0%,#f0f9fc 100%); z-index:-1; }
+        .bg-shape { position:fixed; opacity:0.07; z-index:-1; border-radius:50%; pointer-events:none; }
+        .bg-shape-1 { top:5%; right:-5%; width:min(420px,60vw); height:min(420px,60vw); background:radial-gradient(circle,var(--primary-blue) 0%,transparent 70%); animation:float 25s ease-in-out infinite; }
+        .bg-shape-2 { bottom:5%; left:-5%; width:min(360px,55vw); height:min(360px,55vw); background:radial-gradient(circle,var(--sky-blue) 0%,transparent 70%); animation:float 30s ease-in-out infinite reverse; }
+
+        /* ===== HEADER ===== */
+        header {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 1px 0 rgba(59,130,246,0.08), 0 4px 24px rgba(59,130,246,0.06);
+            position: sticky; top:0; z-index:100;
+            animation: slideDown 0.5s ease-out;
+        }
+        .header-content {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--container-pad);
+            height: 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--space-sm);
+            overflow: hidden;
+        }
+        .logo { display:flex; align-items:center; flex-shrink:0; text-decoration:none; }
+        .logo-img { height:44px; width:auto; display:block; }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            flex-shrink: 1;
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .header-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--gray);
+            flex-wrap: nowrap;
+            white-space: nowrap;
+        }
+        .header-info-divider { color:#d1d5db; flex-shrink:0; }
+        .header-info-item { display:flex; align-items:center; gap:0.25rem; white-space:nowrap; flex-shrink:0; }
+        .header-info-item strong { color:var(--dark); font-weight:600; }
+
+        /* ===== LANGUAGE SWITCHER ===== */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            flex-shrink: 0;
+        }
+        .lang-btn {
+            padding: 0.3rem 0.55rem;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 6px;
+            background: transparent;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--gray);
+            cursor: pointer;
+            transition: all 0.18s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            line-height: 1;
+        }
+        .lang-btn:hover {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+            background: rgba(59,130,246,0.05);
+        }
+        .lang-btn.active {
+            background: var(--primary-blue);
+            border-color: var(--primary-blue);
+            color: white;
+        }
+
+        /* ===== MAIN CONTAINER ===== */
+        .container { max-width:var(--container-max); margin:0 auto; padding:var(--space-2xl) var(--container-pad); }
+
+        /* ===== TWO-COLUMN LAYOUT ===== */
+        .registration-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(2rem,4vw,4rem);
+            align-items: start;
+            animation: fadeInUp 0.7s ease-out;
+        }
+
+        /* ===== LEFT PANEL ===== */
+        .form-intro { position:sticky; top:calc(64px + var(--space-xl)); animation:fadeInLeft 0.7s ease-out 0.15s backwards; }
+        .form-intro h1 { font-family:'Signika',sans-serif; font-size:clamp(2rem,3.5vw,3.2rem); font-weight:700; color:var(--dark); margin-bottom:var(--space-md); line-height:1.2; }
+        .h1-caec { color:#1a2e4a; }
+        .h1-26   { color:#58A7EA; }
+        .form-intro .tagline { font-size:1rem; color:var(--gray); margin-bottom:var(--space-xl); line-height:1.75; }
+
+        .highlight-box { background:rgba(59,130,246,0.05); border:1px solid rgba(59,130,246,0.15); border-left:4px solid var(--primary-blue); padding:var(--space-lg); border-radius:var(--radius-sm); margin-bottom:var(--space-xl); }
+        .highlight-box h3 { color:var(--primary-blue); font-size:0.95rem; margin-bottom:var(--space-xs); font-weight:600; }
+        .highlight-box p  { color:var(--gray); font-size:0.9rem; line-height:1.5; }
+
+        .features { display:flex; flex-direction:column; gap:var(--space-md); }
+        .feature { display:flex; gap:var(--space-md); align-items:flex-start; padding:var(--space-md); background:rgba(255,255,255,0.7); border-radius:var(--radius-sm); border:1px solid rgba(59,130,246,0.08); }
+        .feature-icon { background:linear-gradient(135deg,var(--primary-blue) 0%,var(--sky-blue) 100%); color:white; width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-weight:700; font-size:1rem; }
+        .feature-text { flex:1; min-width:0; }
+        .feature-text strong { color:var(--dark); display:block; margin-bottom:0.2rem; font-size:0.95rem; }
+        .feature-text p { color:var(--gray); font-size:0.85rem; line-height:1.5; }
+
+        /* ===== FORM CARD ===== */
+        .form-container { background:var(--white); border-radius:var(--radius-lg); box-shadow:0 4px 6px rgba(0,0,0,0.04),0 20px 48px rgba(59,130,246,0.10); position:relative; overflow:hidden; animation:fadeInRight 0.7s ease-out 0.15s backwards; }
+        .form-container::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--primary-blue) 0%,var(--sky-blue) 100%); }
+        .form-inner { padding:clamp(1.5rem,4vw,2.5rem); }
+        .form-header { margin-bottom:var(--space-xl); text-align:center; }
+        .form-header h2 { font-family:'Merriweather',serif; font-size:clamp(1.4rem,2.5vw,1.9rem); color:var(--dark); margin-bottom:var(--space-xs); line-height:1.3; }
+        .form-header h2 span { color:var(--primary-blue); }
+        .form-header p { color:var(--gray); font-size:0.9rem; }
+
+        form { display:flex; flex-direction:column; gap:var(--space-lg); }
+        .form-row { display:grid; grid-template-columns:1fr 1fr; gap:var(--space-md); align-items:start; }
+        .form-row.full { grid-template-columns:1fr; }
+        .form-group { display:flex; flex-direction:column; gap:0.45rem; }
+        .form-group label { font-weight:600; color:var(--dark); font-size:0.875rem; line-height:1.4; }
+
+        .form-group input,
+        .form-group select {
+            width:100%; padding:0.75rem 0.875rem;
+            border:1.5px solid #e2e8f0; border-radius:var(--radius-sm);
+            font-family:'Poppins',sans-serif; font-size:0.95rem; color:var(--dark);
+            background:#fafafa; transition:border-color 0.2s ease,box-shadow 0.2s ease,background 0.2s ease;
+            line-height:1.5; -webkit-appearance:none; appearance:none;
+        }
+        .form-group input::placeholder { color:#c0cad6; }
+        .form-group input:focus, .form-group select:focus { outline:none; border-color:var(--primary-blue); box-shadow:0 0 0 3px rgba(59,130,246,0.12); background:var(--white); }
+        .form-group select { cursor:pointer; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath fill='%236b7280' d='M7 10L2 5h10z'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 0.875rem center; padding-right:2.5rem; }
+
+        @media (hover:none) {
+            .form-group input, .form-group select { font-size:16px; min-height:48px; }
+        }
+
+        .form-group input.input-error, .form-group select.input-error { border-color:var(--red-accent); background:#fff8f8; box-shadow:0 0 0 3px rgba(220,38,38,0.08); }
+        .error-message { color:var(--red-accent); font-size:0.78rem; font-weight:500; display:none; line-height:1.4; }
+
+        .success-message { background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.3); border-left:4px solid var(--success); color:#047857; padding:var(--space-md) var(--space-lg); border-radius:var(--radius-sm); margin-bottom:var(--space-lg); display:none; font-weight:500; font-size:0.9rem; line-height:1.5; }
+        .success-message.show { display:block; animation:fadeInUp 0.3s ease-out; }
+
+        .form-submit { width:100%; padding:0.9rem var(--space-lg); background:linear-gradient(135deg,var(--primary-blue) 0%,var(--sky-blue) 100%); color:white; border:none; border-radius:var(--radius-sm); font-weight:600; font-size:1rem; cursor:pointer; transition:transform 0.2s ease,box-shadow 0.2s ease,opacity 0.2s ease; font-family:'Poppins',sans-serif; box-shadow:0 4px 14px rgba(59,130,246,0.35); display:flex; align-items:center; justify-content:center; gap:0.5rem; min-height:52px; }
+        .form-submit:hover:not(:disabled) { transform:translateY(-2px); box-shadow:0 8px 24px rgba(59,130,246,0.4); }
+        .form-submit:active:not(:disabled) { transform:translateY(0); }
+        .form-submit:disabled { opacity:0.65; cursor:not-allowed; }
+        .spinner { display:inline-block; width:16px; height:16px; border:2px solid rgba(255,255,255,0.35); border-top-color:white; border-radius:50%; animation:spin 0.6s linear infinite; flex-shrink:0; }
+
+        .terms { font-size:0.8rem; color:var(--gray); text-align:center; line-height:1.6; }
+        .terms a { color:var(--primary-blue); text-decoration:none; font-weight:500; }
+        .terms a:hover { text-decoration:underline; }
+
+        /* ===== TABLET ===== */
+        @media (max-width:1024px) {
+            .registration-section { gap:2rem; }
+            .form-intro { position:static; }
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width:768px) {
+            .header-info { display: none; }
+            .container { padding:var(--space-lg) var(--space-md); }
+            .registration-section { grid-template-columns:1fr; gap:var(--space-lg); }
+            .form-intro { position:static; }
+            .form-intro h1 { font-size:2.4rem; line-height:1.15; margin-bottom:0.75rem; }
+            .form-intro .tagline { font-size:0.9rem; line-height:1.65; margin-bottom:var(--space-md); }
+            .highlight-box { padding:0.875rem var(--space-md); margin-bottom:var(--space-md); }
+            .highlight-box h3 { font-size:0.875rem; }
+            .highlight-box p { font-size:0.825rem; }
+            .features { display:grid; grid-template-columns:1fr 1fr; gap:var(--space-sm); }
+            .feature { flex-direction:column; align-items:flex-start; padding:var(--space-sm); gap:var(--space-xs); }
+            .feature-icon { width:32px; height:32px; font-size:0.85rem; }
+            .feature-text strong { font-size:0.85rem; }
+            .feature-text p { font-size:0.78rem; }
+            .form-inner { padding:var(--space-lg); }
+            .form-header { margin-bottom:var(--space-md); }
+            .form-header h2 { font-size:1.4rem; }
+            .form-header p { font-size:0.825rem; }
+            form { gap:var(--space-md); }
+            .form-row { grid-template-columns:1fr; gap:var(--space-md); }
+            .form-group label { font-size:0.825rem; }
+            .form-group input, .form-group select { padding:0.7rem 0.8rem; font-size:16px; }
+            .form-submit { padding:0.875rem; font-size:0.95rem; min-height:50px; }
+            .terms { font-size:0.75rem; }
+            .success-message { font-size:0.85rem; padding:0.875rem var(--space-md); }
+        }
+
+        /* ===== SMALL MOBILE ===== */
+        @media (max-width:480px) {
+            .header-content { height:52px; padding: 0 0.875rem; }
+            .logo-img { height:28px; }
+            .header-info { display: none; }
+            .lang-btn { font-size:0.65rem; padding:0.25rem 0.45rem; }
+            .lang-switcher { gap: 0.2rem; }
+            .container { padding:var(--space-md) var(--space-md); }
+            .form-intro h1 { font-size:2rem; }
+            .features { grid-template-columns:1fr; }
+            .feature { flex-direction:row; align-items:center; padding:0.6rem var(--space-sm); }
+            .feature-icon { width:30px; height:30px; font-size:0.8rem; flex-shrink:0; }
+            .feature-text strong { font-size:0.825rem; }
+            .feature-text p { font-size:0.75rem; }
+            .form-inner { padding:var(--space-md) 0.875rem; }
+            .form-header h2 { font-size:1.25rem; }
+            .form-group label { font-size:0.8rem; }
+            .error-message { font-size:0.72rem; }
+            .form-submit { font-size:0.9rem; min-height:48px; }
+        }
+
+        /* ===== EXTRA SMALL ===== */
+        @media (max-width:360px) {
+            .header-info-divider, .header-info-item:last-child { display:none; }
+            .form-intro h1 { font-size:1.75rem; }
+            .form-inner { padding:0.875rem 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="data:image/webp;base64,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" alt="CAEC26 Logo" class="logo-img">
+            </div>
+            <div class="header-right">
+                <div class="header-info">
+                    <div class="header-info-item"><strong data-i18n="date">June 15&#8211;17, 2026</strong></div>
+                    <span class="header-info-divider">&#183;</span>
+                    <div class="header-info-item"><strong>Tashkent</strong><span class="location-text">, Uzbekistan</span></div>
+                </div>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+                    <button class="lang-btn" onclick="setLang('ru')">RU</button>
+                    <button class="lang-btn" onclick="setLang('uz')">UZ</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="registration-section">
+            <div class="form-intro">
+                <h1>
+                    <span data-i18n="heroJoin">Join </span><span class="h1-caec">CAEC</span><span class="h1-26">26</span>
+                </h1>
+                <p class="tagline" data-i18n="tagline">Secure your place at the premier Central Asian Endourology Congress and connect with leading specialists from across the region.</p>
+
+                <div class="highlight-box">
+                    <h3 data-i18n="earlyBirdTitle">Free Registration Available</h3>
+                    <p data-i18n="earlyBirdDesc">For Master's students, residents &amp; ordinators in Urology at Uzbekistan medical institutions. Subject to eligibility verification.</p>
+                </div>
+
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">&#10003;</div>
+                        <div class="feature-text">
+                            <strong data-i18n="feat1Title">Expert Sessions</strong>
+                            <p data-i18n="feat1Desc">Learn from world-renowned endourology specialists</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">&#10003;</div>
+                        <div class="feature-text">
+                            <strong data-i18n="feat2Title">Networking</strong>
+                            <p data-i18n="feat2Desc">Connect with professionals from 25+ countries</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">&#10003;</div>
+                        <div class="feature-text">
+                            <strong data-i18n="feat3Title">CME Credits</strong>
+                            <p data-i18n="feat3Desc">Earn continuing medical education credits</p>
+                        </div>
+                    </div>
+                    <div class="feature" style="border-color:rgba(16,185,129,0.2); background:rgba(16,185,129,0.04);">
+                        <div class="feature-icon" style="background:linear-gradient(135deg,#10b981,#34d399);">&#10003;</div>
+                        <div class="feature-text">
+                            <strong data-i18n="feat4Title">Free for Students</strong>
+                            <p data-i18n="feat4Desc">Master's students · Residents · Ordinators specializing in Urology at Uzbekistan medical institutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <div class="form-inner">
+                    <div class="form-header">
+                        <h2 data-i18n="formTitle">Register Now <span>&#8594;</span></h2>
+                        <p data-i18n="formSubtitle">Complete your registration in just 2 minutes</p>
+                    </div>
+
+                    <div class="success-message" id="successMessage" data-i18n="successMsg">
+                        &#10003; Registration successful! Thank you for registering for CAEC26. We'll send confirmation details to your email shortly.
+                    </div>
+
+                    <form id="registrationForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" data-i18n="labelFirstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" data-i18n-placeholder="phFirstName" placeholder="John" required tabindex="1" aria-describedby="firstNameError" autocomplete="given-name">
+                                <span class="error-message" id="firstNameError" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" data-i18n="labelLastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" data-i18n-placeholder="phLastName" placeholder="Smith" required tabindex="2" aria-describedby="lastNameError" autocomplete="family-name">
+                                <span class="error-message" id="lastNameError" role="alert"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" data-i18n="labelEmail">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required tabindex="3" aria-describedby="emailError" autocomplete="email">
+                                <span class="error-message" id="emailError" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" data-i18n="labelPhone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+998 90 123 4567" required tabindex="4" aria-describedby="phoneError" autocomplete="tel">
+                                <span class="error-message" id="phoneError" role="alert"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="institution" data-i18n="labelInstitution">Institution / Hospital *</label>
+                                <input type="text" id="institution" name="institution" data-i18n-placeholder="phInstitution" placeholder="Medical Center Name" required tabindex="5" aria-describedby="institutionError" autocomplete="organization">
+                                <span class="error-message" id="institutionError" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="specialty" data-i18n="labelSpecialty">Specialty *</label>
+                                <select id="specialty" name="specialty" required tabindex="6" aria-describedby="specialtyError">
+                                    <option value="" data-i18n="optSpecialtyDefault">Select your specialty</option>
+                                    <option value="urology">Urology</option>
+                                    <option value="endourology">Endourology</option>
+                                    <option value="surgery" data-i18n="optSurgery">General Surgery</option>
+                                    <option value="resident" data-i18n="optResident">Resident/Fellow</option>
+                                    <option value="other" data-i18n="optOther">Other</option>
+                                </select>
+                                <span class="error-message" id="specialtyError" role="alert"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="regType" data-i18n="labelRegType">Registration Type *</label>
+                                <select id="regType" name="regType" required tabindex="7" aria-describedby="regTypeError">
+                                    <option value="" data-i18n="optRegDefault">Select registration type</option>
+                                    <option value="student" data-i18n="optStudent">Student</option>
+                                    <option value="professional" data-i18n="optProfessional">Professional</option>
+                                </select>
+                                <span class="error-message" id="regTypeError" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="country" data-i18n="labelCountry">Country *</label>
+                                <select id="country" name="country" required tabindex="8" aria-describedby="countryError">
+                                    <option value="" data-i18n="optCountryDefault">Select your country</option>
+                                    <option value="UZ">Uzbekistan</option>
+                                    <option value="KZ">Kazakhstan</option>
+                                    <option value="KG">Kyrgyzstan</option>
+                                    <option value="TJ">Tajikistan</option>
+                                    <option value="TM">Turkmenistan</option>
+                                    <option value="AZ">Azerbaijan</option>
+                                    <option value="RU">Russia</option>
+                                    <option value="TR">Turkey</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="US">United States</option>
+                                    <option value="GB">United Kingdom</option>
+                                    <option value="FR">France</option>
+                                    <option value="IN">India</option>
+                                    <option value="CN">China</option>
+                                    <option value="OTHER" data-i18n="optOther">Other</option>
+                                </select>
+                                <span class="error-message" id="countryError" role="alert"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row full">
+                            <div class="form-group">
+                                <label for="dietary">
+                                    <span data-i18n="labelDietary">Dietary Requirements</span>
+                                    <span style="color:var(--gray);font-weight:400;" data-i18n="optionalLabel"> (Optional)</span>
+                                </label>
+                                <input type="text" id="dietary" name="dietary" data-i18n-placeholder="phDietary" placeholder="e.g., Vegetarian, Gluten-free" tabindex="9">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="form-submit" tabindex="10">
+                            <span id="submitText" data-i18n="submitBtn">Complete Registration</span>
+                        </button>
+
+                        <p class="terms">
+                            <span data-i18n="termsText">By registering, you agree to our</span>
+                            <a href="#" data-i18n="termsLink">Terms of Service</a>
+                            <span data-i18n="termsAnd">and</span>
+                            <a href="#" data-i18n="privacyLink">Privacy Policy</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== TRANSLATIONS =====
+        const i18n = {
+            en: {
+                date: "June 15\u201317, 2026",
+                heroJoin: "Join ",
+                tagline: "Secure your place at the premier Central Asian Endourology Congress and connect with leading specialists from across the region.",
+                earlyBirdTitle: "Free Registration Available",
+                earlyBirdDesc: "For Master's students, residents & ordinators in Urology at Uzbekistan medical institutions. Subject to eligibility verification.",
+                feat1Title: "Expert Sessions",
+                feat1Desc: "Learn from world-renowned endourology specialists",
+                feat2Title: "Networking",
+                feat2Desc: "Connect with professionals from 25+ countries",
+                feat3Title: "CME Credits",
+                feat3Desc: "Earn continuing medical education credits",
+                formTitle: "Register Now \u2192",
+                formSubtitle: "Complete your registration in just 2 minutes",
+                successMsg: "\u2713 Registration successful! Thank you for registering for CAEC26. We'll send confirmation details to your email shortly.",
+                labelFirstName: "First Name *",
+                labelLastName: "Last Name *",
+                labelEmail: "Email Address *",
+                labelPhone: "Phone Number *",
+                labelInstitution: "Institution / Hospital *",
+                labelSpecialty: "Specialty *",
+                labelRegType: "Registration Type *",
+                labelCountry: "Country *",
+                labelDietary: "Dietary Requirements",
+                optionalLabel: " (Optional)",
+                phFirstName: "John",
+                phLastName: "Smith",
+                phInstitution: "Medical Center Name",
+                phDietary: "e.g., Vegetarian, Gluten-free",
+                optSpecialtyDefault: "Select your specialty",
+                optSurgery: "General Surgery",
+                optResident: "Resident/Fellow",
+                optOther: "Other",
+                optRegDefault: "Select registration type",
+                optEarlyBird: "Early Bird - $299",
+                optStandard: "Standard - $399",
+                optStudent: "Student - $149",
+                optSpeaker: "Speaker - Free",
+                optCountryDefault: "Select your country",
+                submitBtn: "Complete Registration",
+                termsText: "By registering, you agree to our",
+                termsLink: "Terms of Service",
+                termsAnd: "and",
+                privacyLink: "Privacy Policy",
+                errRequired: "This field is required",
+                errFirstName: "First name is required",
+                errLastName: "Last name is required",
+                errEmail: "Please enter a valid email address",
+                errPhoneRequired: "Phone number is required",
+                errPhoneInvalid: "Please enter a valid phone number",
+                errInstitution: "Institution is required",
+                errSpecialty: "Please select a specialty",
+                errRegType: "Please select registration type",
+                errCountry: "Please select your country",
+                processing: "Processing..."
+            },
+            ru: {
+                date: "15\u201317 \u0438\u044e\u043d\u044f 2026",
+                heroJoin: "\u041f\u0440\u0438\u0441\u043e\u0435\u0434\u0438\u043d\u044f\u0439\u0442\u0435\u0441\u044c ",
+                tagline: "\u0417\u0430\u0431\u0440\u043e\u043d\u0438\u0440\u0443\u0439\u0442\u0435 \u043c\u0435\u0441\u0442\u043e \u043d\u0430 \u0432\u0435\u0434\u0443\u0449\u0435\u043c \u0426\u0435\u043d\u0442\u0440\u0430\u043b\u044c\u043d\u043e\u0430\u0437\u0438\u0430\u0442\u0441\u043a\u043e\u043c \u043a\u043e\u043d\u0433\u0440\u0435\u0441\u0441\u0435 \u043f\u043e \u044d\u043d\u0434\u043e\u0443\u0440\u043e\u043b\u043e\u0433\u0438\u0438 \u0438 \u043f\u043e\u0437\u043d\u0430\u043a\u043e\u043c\u044c\u0442\u0435\u0441\u044c \u0441 \u0432\u0435\u0434\u0443\u0449\u0438\u043c\u0438 \u0441\u043f\u0435\u0446\u0438\u0430\u043b\u0438\u0441\u0442\u0430\u043c\u0438 \u0440\u0435\u0433\u0438\u043e\u043d\u0430.",
+                earlyBirdTitle: "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u0430\u044f \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f",
+                earlyBirdDesc: "For Master's students, residents & ordinators in Urology at Uzbekistan medical institutions. Subject to eligibility verification.",
+                feat1Title: "\u042d\u043a\u0441\u043f\u0435\u0440\u0442\u043d\u044b\u0435 \u0441\u0435\u0441\u0441\u0438\u0438",
+                feat1Desc: "\u0423\u0447\u0438\u0442\u0435\u0441\u044c \u0443 \u0432\u0441\u0435\u043c\u0438\u0440\u043d\u043e \u0438\u0437\u0432\u0435\u0441\u0442\u043d\u044b\u0445 \u0441\u043f\u0435\u0446\u0438\u0430\u043b\u0438\u0441\u0442\u043e\u0432",
+                feat2Title: "\u041d\u0435\u0442\u0432\u043e\u0440\u043a\u0438\u043d\u0433",
+                feat2Desc: "\u041e\u0431\u0449\u0430\u0439\u0442\u0435\u0441\u044c \u0441 \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u0430\u043c\u0438 \u0438\u0437 25+ \u0441\u0442\u0440\u0430\u043d",
+                feat3Title: "\u041a\u0440\u0435\u0434\u0438\u0442\u044b CME",
+                feat3Desc: "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u0435 \u043a\u0440\u0435\u0434\u0438\u0442\u044b \u043d\u0435\u043f\u0440\u0435\u0440\u044b\u0432\u043d\u043e\u0433\u043e \u043c\u0435\u0434\u0438\u0446\u0438\u043d\u0441\u043a\u043e\u0433\u043e \u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u044f",
+                feat4Title: "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e \u0434\u043b\u044f \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432",
+                feat4Desc: "\u041c\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u043d\u0442\u044b · \u0420\u0435\u0437\u0438\u0434\u0435\u043d\u0442\u044b · \u041e\u0440\u0434\u0438\u043d\u0430\u0442\u043e\u0440\u044b \u043f\u043e \u0443\u0440\u043e\u043b\u043e\u0433\u0438\u0438 \u0432 \u043c\u0435\u0434\u0443\u0447\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u044f\u0445 \u0423\u0437\u0431\u0435\u043a\u0438\u0441\u0442\u0430\u043d\u0430. \u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u0430 \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430.",
+                formTitle: "\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u2192",
+                formSubtitle: "\u0417\u0430\u043f\u043e\u043b\u043d\u0438\u0442\u0435 \u0444\u043e\u0440\u043c\u0443 \u0437\u0430 2 \u043c\u0438\u043d\u0443\u0442\u044b",
+                successMsg: "\u2713 \u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f \u0443\u0441\u043f\u0435\u0448\u043d\u0430! \u0421\u043f\u0430\u0441\u0438\u0431\u043e \u0437\u0430 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044e \u043d\u0430 CAEC26. \u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043d\u0438\u0435 \u0431\u0443\u0434\u0435\u0442 \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043e \u043d\u0430 \u0432\u0430\u0448 email.",
+                labelFirstName: "\u0418\u043c\u044f *",
+                labelLastName: "\u0424\u0430\u043c\u0438\u043b\u0438\u044f *",
+                labelEmail: "Email *",
+                labelPhone: "\u0422\u0435\u043b\u0435\u0444\u043e\u043d *",
+                labelInstitution: "\u0423\u0447\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435 / \u0411\u043e\u043b\u044c\u043d\u0438\u0446\u0430 *",
+                labelSpecialty: "\u0421\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c *",
+                labelRegType: "\u0422\u0438\u043f \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438 *",
+                labelCountry: "\u0421\u0442\u0440\u0430\u043d\u0430 *",
+                labelDietary: "\u041f\u0438\u0449\u0435\u0432\u044b\u0435 \u043f\u0440\u0435\u0434\u043f\u043e\u0447\u0442\u0435\u043d\u0438\u044f",
+                optionalLabel: " (\u041d\u0435\u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e)",
+                phFirstName: "\u0418\u0432\u0430\u043d",
+                phLastName: "\u0418\u0432\u0430\u043d\u043e\u0432",
+                phInstitution: "\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043c\u0435\u0434\u0446\u0435\u043d\u0442\u0440\u0430",
+                phDietary: "\u043d\u0430\u043f\u0440., \u0432\u0435\u0433\u0435\u0442\u0430\u0440\u0438\u0430\u043d\u0441\u043a\u0430\u044f \u0435\u0434\u0430",
+                optSpecialtyDefault: "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c",
+                optSurgery: "\u041e\u0431\u0449\u0430\u044f \u0445\u0438\u0440\u0443\u0440\u0433\u0438\u044f",
+                optResident: "\u0420\u0435\u0437\u0438\u0434\u0435\u043d\u0442/\u0418\u043d\u0442\u0435\u0440\u043d",
+                optOther: "\u0414\u0440\u0443\u0433\u043e\u0435",
+                optRegDefault: "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0442\u0438\u043f",
+                optStudent: "\u0421\u0442\u0443\u0434\u0435\u043d\u0442",
+                optProfessional: "\u0421\u043f\u0435\u0446\u0438\u0430\u043b\u0438\u0441\u0442",
+                optCountryDefault: "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043d\u0443",
+                submitBtn: "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044c \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044e",
+                termsText: "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u0443\u044f\u0441\u044c, \u0432\u044b \u0441\u043e\u0433\u043b\u0430\u0448\u0430\u0435\u0442\u0435\u0441\u044c \u0441",
+                termsLink: "\u0423\u0441\u043b\u043e\u0432\u0438\u044f\u043c\u0438",
+                termsAnd: "\u0438",
+                privacyLink: "\u041f\u043e\u043b\u0438\u0442\u0438\u043a\u043e\u0439 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438",
+                errFirstName: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0438\u043c\u044f",
+                errLastName: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0444\u0430\u043c\u0438\u043b\u0438\u044e",
+                errEmail: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u044b\u0439 email",
+                errPhoneRequired: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0442\u0435\u043b\u0435\u0444\u043e\u043d",
+                errPhoneInvalid: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u044b\u0439 \u0442\u0435\u043b\u0435\u0444\u043e\u043d",
+                errInstitution: "\u0423\u043a\u0430\u0436\u0438\u0442\u0435 \u0443\u0447\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435",
+                errSpecialty: "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c",
+                errRegType: "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0442\u0438\u043f \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438",
+                errCountry: "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043d\u0443",
+                processing: "\u041e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0430..."
+            },
+            uz: {
+                date: "15\u201317-iyun 2026",
+                heroJoin: "Qo'shiling ",
+                tagline: "Markaziy Osiyo Endourologiya Kongressida o'z o'rningizni band qiling va mintaqaning yetakchi mutaxassislari bilan tanishing.",
+                earlyBirdTitle: "Bepul ro'yxatdan o'tish mavjud",
+                earlyBirdDesc: "O'zbekiston tibbiyot muassasalarida Urologiya bo'yicha magistratura talabalari, rezidentlar va ordinatorlar uchun. Tekshiruv talab etiladi.",
+                feat1Title: "Ekspert sessiyalar",
+                feat1Desc: "Jahon miqyosidagi endourologiya mutaxassislaridan o'rganing",
+                feat2Title: "Tarmoqlash",
+                feat2Desc: "25+ mamlakatdan mutaxassislar bilan bog'laning",
+                feat3Title: "CME kreditlari",
+                feat3Desc: "Tibbiy ta'lim kreditlarini oling",
+                feat4Title: "Talabalar uchun bepul",
+                feat4Desc: "Magistratura talabalari · Rezidentlar · O'zbekiston tibbiyot muassasalarida Urologiya ordinatorlari. Tasdiqlash talab etiladi.",
+                formTitle: "Ro'yxatdan o'ting \u2192",
+                formSubtitle: "Ro'yxatdan o'tishni 2 daqiqada bajaring",
+                successMsg: "\u2713 Ro'yxatdan o'tish muvaffaqiyatli! CAEC26 uchun ro'yxatdan o'tganingiz uchun rahmat. Tasdiqlash ma'lumotlari emailingizga yuboriladi.",
+                labelFirstName: "Ism *",
+                labelLastName: "Familiya *",
+                labelEmail: "Email manzil *",
+                labelPhone: "Telefon raqam *",
+                labelInstitution: "Muassasa / Kasalxona *",
+                labelSpecialty: "Mutaxassislik *",
+                labelRegType: "Ro'yxatdan o'tish turi *",
+                labelCountry: "Mamlakat *",
+                labelDietary: "Ovqatlanish talablari",
+                optionalLabel: " (Ixtiyoriy)",
+                phFirstName: "Jasur",
+                phLastName: "Karimov",
+                phInstitution: "Tibbiyot markazi nomi",
+                phDietary: "mas., Vegetarian",
+                optSpecialtyDefault: "Mutaxassislikni tanlang",
+                optSurgery: "Umumiy jarrohlik",
+                optResident: "Rezident/Stajer",
+                optOther: "Boshqa",
+                optRegDefault: "Ro'yxatdan o'tish turini tanlang",
+                optEarlyBird: "Erta ro'yxat - $299",
+                optStandard: "Standart - $399",
+                optStudent: "Talaba - $149",
+                optSpeaker: "Ma'ruzachi - Bepul",
+                optCountryDefault: "Mamlakatni tanlang",
+                submitBtn: "Ro'yxatdan o'tishni yakunlash",
+                termsText: "Ro'yxatdan o'tish orqali siz",
+                termsLink: "Foydalanish shartlari",
+                termsAnd: "va",
+                privacyLink: "Maxfiylik siyosati",
+                errFirstName: "Ism kiritish shart",
+                errLastName: "Familiya kiritish shart",
+                errEmail: "To'g'ri email manzil kiriting",
+                errPhoneRequired: "Telefon raqam kiritish shart",
+                errPhoneInvalid: "To'g'ri telefon raqam kiriting",
+                errInstitution: "Muassasa kiritish shart",
+                errSpecialty: "Mutaxassislikni tanlang",
+                errRegType: "Ro'yxatdan o'tish turini tanlang",
+                errCountry: "Mamlakatni tanlang",
+                processing: "Qayta ishlanmoqda..."
+            }
+        };
+
+        let currentLang = 'en';
+
+        function setLang(lang) {
+            currentLang = lang;
+            const t = i18n[lang];
+
+            // Update all [data-i18n] elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) {
+                    // Preserve inner spans (like the arrow in form title)
+                    if (el.id === 'submitText') {
+                        el.textContent = t[key];
+                    } else if (el.tagName === 'H2' && el.querySelector('span')) {
+                        const arrow = el.querySelector('span');
+                        el.textContent = t[key];
+                        el.appendChild(arrow);
+                    } else {
+                        el.textContent = t[key];
+                    }
+                }
+            });
+
+            // Update placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (t[key] !== undefined) el.placeholder = t[key];
+            });
+
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
+            });
+
+            // Update html lang attribute
+            document.documentElement.lang = lang;
+        }
+
+        // ===== FORM LOGIC =====
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            clearErrors();
+            const t = i18n[currentLang];
+
+            const firstName   = document.getElementById('firstName').value.trim();
+            const lastName    = document.getElementById('lastName').value.trim();
+            const email       = document.getElementById('email').value.trim();
+            const phone       = document.getElementById('phone').value.trim();
+            const institution = document.getElementById('institution').value.trim();
+            const specialty   = document.getElementById('specialty').value;
+            const regType     = document.getElementById('regType').value;
+            const country     = document.getElementById('country').value;
+
+            let isValid = true;
+
+            if (!firstName)  { showError('firstNameError',  t.errFirstName);   isValid = false; }
+            if (!lastName)   { showError('lastNameError',   t.errLastName);    isValid = false; }
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailRegex.test(email)) { showError('emailError', t.errEmail); isValid = false; }
+            if (!phone) {
+                showError('phoneError', t.errPhoneRequired); isValid = false;
+            } else if (phone.replace(/[\s\-\+\(\)]/g, '').length < 7) {
+                showError('phoneError', t.errPhoneInvalid);  isValid = false;
+            }
+            if (!institution) { showError('institutionError', t.errInstitution); isValid = false; }
+            if (!specialty)   { showError('specialtyError',   t.errSpecialty);   isValid = false; }
+            if (!regType)     { showError('regTypeError',     t.errRegType);     isValid = false; }
+            if (!country)     { showError('countryError',     t.errCountry);     isValid = false; }
+
+            if (isValid) {
+                try {
+                    fbq('track', 'Lead', {
+                        content_name: 'CAEC26 Registration',
+                        content_type: 'event_registration',
+                        value: getRegistrationPrice(regType),
+                        currency: 'USD',
+                        email, phone,
+                        first_name: firstName, last_name: lastName, country
+                    });
+                } catch(e) {}
+
+                const submitBtn  = document.querySelector('.form-submit');
+                const submitText = document.getElementById('submitText');
+                submitBtn.disabled = true;
+                submitText.innerHTML = '<span class="spinner"></span> ' + t.processing;
+
+                // ---- GOOGLE SHEETS SUBMISSION ----
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz02i84FDdYX4aLfj89RTeySz_vaXgFrGiKkj-dvdW8g4nCRMXLqD2GsmjFcoYAihBE_g/exec';
+
+                const dietary = document.getElementById('dietary').value.trim();
+                const params = new URLSearchParams({
+                    firstName, lastName, email, phone,
+                    institution, specialty, regType, country,
+                    dietary, language: currentLang
+                });
+
+                // Use image ping — works cross-origin with no CORS issues
+                const img = new Image();
+                img.onload = img.onerror = function() {
+                    // Fire pixel
+                    try {
+                        fbq('track', 'Purchase', {
+                            content_name: 'CAEC26 Registration Complete',
+                            content_type: 'event_registration',
+                            value: getRegistrationPrice(regType),
+                            currency: 'USD',
+                            content_id: regType
+                        });
+                    } catch(e) {}
+
+                    // Show success
+                    document.getElementById('successMessage').classList.add('show');
+                    document.getElementById('registrationForm').reset();
+                    submitBtn.disabled = false;
+                    submitText.textContent = i18n[currentLang].submitBtn;
+
+                    setTimeout(() => {
+                        document.getElementById('successMessage').classList.remove('show');
+                    }, 6000);
+                };
+                img.src = SCRIPT_URL + '?' + params.toString();
+            }
+        }
+
+        function showError(elementId, message) {
+            const el = document.getElementById(elementId);
+            el.textContent = message;
+            el.style.display = 'block';
+            const input = document.getElementById(elementId.replace('Error', ''));
+            if (input) { input.setAttribute('aria-invalid', 'true'); input.classList.add('input-error'); }
+        }
+
+        function clearErrors() {
+            document.querySelectorAll('.error-message').forEach(el => { el.style.display='none'; el.textContent=''; });
+            document.querySelectorAll('.input-error').forEach(el => { el.classList.remove('input-error'); el.removeAttribute('aria-invalid'); });
+        }
+
+        function getRegistrationPrice(regType) {
+            return {early:299, standard:399, student:149, speaker:0}[regType] || 0;
+        }
+    </script>
+</body>
+</html>
